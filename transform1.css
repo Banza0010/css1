@@ -108,6 +108,16 @@ img{
     background: #715320;
 }
 
+.circle1{
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    background: orange;
+    border-radius: 200px;
+}
+
 
 
 @keyframes move1 {
