@@ -1,0 +1,112 @@
+/* body{
+    background: lightcoral;
+    text-align: center; 
+}*/
+
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.ground, .sky, .road{
+    position: relative;
+}
+
+.wrapper{
+    width: 100px;
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+img{
+    width: 150px;
+    height: 150;
+    transform: translate(1);
+}
+
+.circle{
+    width:100px;
+    padding: 50px 0;
+    line-height: 0;
+    margin: 60px auto;
+    background: rgba(244, 186, 18, 0.91);
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    /*transition: 1s;
+    transition: background 1s, transform 1s;*/
+}
+
+.circle:hover{
+    background: sandybrown;
+    transform: rotate(360deg);
+}
+
+.scene{
+    height: 30%;
+    background: #947545;
+    box-sizing: border-box;
+    border-top: 10px solid #4D9837;
+    border-bottom: 10px solid 947545;
+    width: 100%;
+}
+
+.ground{
+    height: 30%;
+    background:skyblue;
+}
+
+.sky{
+    height: 40%;
+    background: skyblue;
+}
+
+.lines{
+    box-sizing: border-box;
+    border: 10px dashed #4D9837;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+}
+
+.morty{
+    position: absolute;
+    transform: scale(-1,1);
+    top: 70px;
+    left: 1220px;
+    
+}
+
+.pikachu{
+    position: absolute;
+    top:100px;
+    left:0px;
+    animation-name: move1;
+    animation-duration: 15s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+
+}
+
+.square1{
+    width: 100px;
+    height: 100px;
+    left:700px;
+    background: #094409;
+}
+
+
+
+@keyframes move1 {
+    from{
+        transform: translateX(-10)
+    }
+    to{
+        transform: translateX(1600px)
+    }
+    
+}
+
