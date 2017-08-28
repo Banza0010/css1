@@ -8,6 +8,7 @@ html, body{
     width: 100%;
     overflow: hidden;
     margin: 0;
+    cursor: url(emoji1.png);
 }
 
 .ground, .sky, .road{
@@ -88,35 +89,34 @@ img{
     animation-duration: 15s;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    /*animation-timing-function: cubic-bezier();*/
 
 }
 
-.square1{
+.cloud{
     position: absolute;
-    width: 100px;
-    height: 100px;
-    top:110px;
-    left:700px;
-    background: #594420;
-}
-.square2{
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top:-90px;
-    left:430px;
-    background: #715320;
 }
 
-.circle1{
-    position: absolute;
-    top: -50px;
-    left: -100px;
+.cloud:nth-child(1){
     width: 200px;
-    height: 200px;
-    background: orange;
-    border-radius: 200px;
+    top:10px;
+    animation: wind 2000s linear infinite reverse;
 }
+.cloud:nth-child(2){
+    width: 300px;
+    top:100px;
+   
+    animation: wind 80s linear infinite reverse;
+}
+
+.cloud:nth-child(3){
+    width: 200px;
+    top:100px;
+    opacity: 0.5;
+    animation: wind 30s linear infinite reverse;
+}
+
 
 
 
@@ -128,5 +128,10 @@ img{
         transform: translateX(1600px)
     }
     
+}
+
+@keyframes wind {
+    from{left: -300px}
+    to{left: 100%}    
 }
 
